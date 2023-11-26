@@ -21,6 +21,16 @@ const app = Vue.createApp({
             this.name = "";
         },
         outputFullName() {
+            console.log("running again!");
+            if(this.name === "") {
+                return "";
+            }
+            return this.name + " " + "Oh";
+        }
+    },
+    computed: {
+        fullName() {
+            console.log("running again!");
             if(this.name === "") {
                 return "";
             }
